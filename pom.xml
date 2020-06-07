@@ -21,7 +21,12 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
             <version>2.2.2.RELEASE</version>
         </dependency>
-
+        <!-- junit单元测试依赖-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+        </dependency>
     </dependencies>
 
 </project>

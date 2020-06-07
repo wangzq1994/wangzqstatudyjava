@@ -14,7 +14,6 @@ public class studaylist {
             },String.valueOf(i)).start();
         }
 
-
     }
 
 }
