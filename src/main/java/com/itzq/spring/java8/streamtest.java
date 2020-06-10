@@ -3,10 +3,8 @@ package com.itzq.spring.java8;
 import org.junit.Test;
 
 import java.time.Year;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class streamtest {
@@ -151,5 +149,24 @@ public class streamtest {
         System.out.println("--------------------------");
         Optional<Double> reduce1 = employees.stream().map(Employee::getWages).reduce(Double::sum);
         System.out.println(reduce1.get());
+    }
+    /*
+     * 收集
+     * collect-将流转换为其他形式，接收一个Collector接口的实现，用于给Stream中元素做汇总的方法。
+     */
+    @Test
+    public void test11(){
+        List<String> list = employees.stream().map(X -> X.getName()).collect(Collectors.toList());
+        list.forEach(System.out::println);
+        System.out.println("----------------------------");
+        Long collect = employees.stream().collect(Collectors.counting());
+        System.out.println(collect);
+        System.out.println("----------------------------");
+        Double collect1 = employees.stream().collect(Collectors.averagingDouble(Employee::getAge));
+        System.out.println(collect1);
+        System.out.println("----------------------------");
+        Map<String, Map<Integer, List<Employee>>> collect2 = employees.stream().collect(Collectors.groupingBy(x -> x.getName(),
+                Collectors.groupingBy(y -> y.getAge())));
+        System.out.println(collect2);
     }
 }
