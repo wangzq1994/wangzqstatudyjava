@@ -27,7 +27,6 @@ public class VolatileDemo {
      * 演示volatile保证内存的可见性
      * 演示volatile 不保证原子性
      */
-    //123
     public static void main(String[] args) {
         //kjxdemo();
         myres my=new myres();
