@@ -79,7 +79,8 @@ class resource2 {
 }
 public class producerconsumer {
     public static void main(String[] args) {
-        resource2 resource=new resource2();
+        //resource2 resource=new resource2();
+        resource resource=new resource();
         new Thread(()->{
             for (int i = 0; i < 30; i++) {
                 resource.reduce();
