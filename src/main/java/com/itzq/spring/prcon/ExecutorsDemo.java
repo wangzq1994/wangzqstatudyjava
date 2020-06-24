@@ -1,7 +1,6 @@
 package com.itzq.spring.prcon;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * @author wangzq
@@ -10,8 +9,18 @@ import java.util.concurrent.Executors;
 public class ExecutorsDemo {
     public static void main(String[] args) {
         //ExecutorService executorService= Executors.newFixedThreadPool(3);
-        ExecutorService executorService= Executors.newCachedThreadPool();
+        //ExecutorService executorService= Executors.newCachedThreadPool();
         //ExecutorService executorService= Executors.newSingleThreadExecutor();
+        ExecutorService executorService=new ThreadPoolExecutor(
+                2,
+                4,
+                1L,
+                TimeUnit.SECONDS,
+                new LinkedBlockingDeque<>(3),
+                Executors.defaultThreadFactory(),
+                //new ThreadPoolExecutor.AbortPolicy()
+                new ThreadPoolExecutor.CallerRunsPolicy()
+        );
         try{
             for (int i = 0; i < 10; i++) {
                 // 执行
