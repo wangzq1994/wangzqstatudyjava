@@ -12,7 +12,9 @@ public class studaylist {
     public static void main(String[] args) {
         //List list= new CopyOnWriteArrayList();//Collections.synchronizedList(new ArrayList<>());//new Vector();//new ArrayList();
         //Set list= new CopyOnWriteArraySet();
-        new HashMap<>();
+        //new HashMap<>().put();
+        //new HashSet<>();
+
         Map<String , String> list= new ConcurrentHashMap<>();//new HashMap<>();
         for (int i = 0; i <30; i++) {
             new Thread(()->{
