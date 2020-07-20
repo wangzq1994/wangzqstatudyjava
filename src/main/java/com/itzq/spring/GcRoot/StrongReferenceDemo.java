@@ -1,6 +1,5 @@
 package com.itzq.spring.GcRoot;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.ReferenceQueue;

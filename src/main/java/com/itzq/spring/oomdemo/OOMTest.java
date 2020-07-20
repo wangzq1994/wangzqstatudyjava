@@ -1,4 +1,4 @@
-package com.itzq.spring.OOMDemo;
+package com.itzq.spring.oomdemo;
 
 import java.util.ArrayList;
 import java.util.List;
