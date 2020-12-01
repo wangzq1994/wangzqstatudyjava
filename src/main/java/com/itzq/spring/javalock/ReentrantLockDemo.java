@@ -9,7 +9,11 @@ class synchronizedResource{
         m2();
     }
     public synchronized  void m2(){
+
         System.out.println(Thread.currentThread().getName()+"woshi m2");
+        synchronized("123"){
+
+        }
     }
 }
 class lockResource{
